@@ -1,0 +1,19 @@
+---
+title: "SQL Practice Page"
+output: html_document
+---
+
+Let's start at the very beginning:
+
+```{r warning=FALSE,message=FALSE}
+library(Lahman)
+library(sqldf)
+```
+
+Then delete messages and write a query:
+
+```{r warning=FALSE,message=FALSE}
+query<- "SELECT playerID,HR,yearID,teamID FROM Batting WHERE teamID='NYA' and yearID=1980"
+sqldf(query)
+```
+
